@@ -1,0 +1,58 @@
+.navbar-section{
+    width: 100vw;
+    height: 90px;
+    padding: 24px 20px;
+    background-color: #F9F1E7;
+    position: relative;
+}
+
+.navbar-wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+}
+
+.navbar-logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+.navbar-manu, .navbar-profile{
+    display: flex;
+    flex-flow: row;
+}
+
+.navbar-manu a{
+    color: black;
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.navbar-manu a:hover{
+    color: #B88E2F;
+}
+
+/* แก้ตรงนี้ */
+.navbar-manu a:active{
+    color: #B88E2F;
+}
+
+.navbar-profile a{
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.accBtn, .CartBtn{
+    padding: 10px 12px 0 10px;
+    border: 1px solid #B88E2F;
+    border-radius: 8px;
+}
+
+.accBtn:hover, .CartBtn:hover{
+    background: #B88E2F;
+}
+
+

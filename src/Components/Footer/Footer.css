@@ -1,0 +1,34 @@
+.footer-section{
+    width: 100vw;
+    height: 110px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-wrapper{
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box1{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+.address{
+    font-size: 16px;
+    font-weight: 500;
+    color: #898989;
+}

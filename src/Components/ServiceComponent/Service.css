@@ -1,0 +1,40 @@
+.service-section{
+    width: 100vw;
+    height: 270px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background: #F9F1E7;
+}
+
+.service-wrapper{
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.service-content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+#service-title{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#service-detail{
+    font-size: 20px;
+    font-weight: 500;
+    color: #898989;
+}
