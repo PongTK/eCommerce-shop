@@ -44,17 +44,21 @@ header{
     justify-content: flex-start;
 }
 
+.all-products h3{
+    color: #B88E2F;
+}
+
 .cate{
     padding: 5px 10px;
     border-radius: 4px;
     border-color: none;
 }
 
-.cate.active{
+.cate.active:not(.all-products){
     background-color: #B88E2F;
 }
 
-.cate.active h3{
+.cate.active:not(.all-products) h3{
     color: #F9F1E7;
 }
 

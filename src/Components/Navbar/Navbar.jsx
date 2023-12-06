@@ -1,29 +1,31 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+
 import account from "/public/Images/account-outline.svg";
 import Cart from "/public/Images/shopping-cart-outlined.svg";
 
 function Navbar() {
   return (
     <>
-      <div className="navbar-section">
+      <nav className="navbar-section">
         <div className="navbar-wrapper">
           <a href="#" className="navbar-logo">
             My Store
           </a>
           <div className="navbar-manu">
-            <a href="#" className="homeBtn">
+            <Link exact to="/" className="homeBtn">
               Home
-            </a>
-            <a href="#" className="contactBtn">
+            </Link>
+            <Link exact to="/Shop" className="contactBtn">
               Shop
-            </a>
-            <a href="#" className="aboutBtn">
+            </Link>
+            <Link exact to="/About" className="aboutBtn">
               About
-            </a>
-            <a href="#" className="contactBtn">
+            </Link>
+            <Link exact to="/Contact" className="contactBtn">
               Contact us
-            </a>
+            </Link>
           </div>
           <div className="navbar-profile">
             <a href="#" className="CartBtn">
@@ -34,7 +36,7 @@ function Navbar() {
             </a>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
