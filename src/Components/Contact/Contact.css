@@ -1,0 +1,102 @@
+.contact-section{
+    margin: 36px 50px;
+}
+
+.contact-wrapper{
+    padding: 50px 200px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.contact-content{
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.contact-heading{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.contact-text{
+    font-size: 16px;
+}
+
+.contact-row{
+    padding: 0 50px;
+    max-width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-column{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.contact-column div{
+    width: 85%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.contact-column>div>a, .contact-column>div>p{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.contact-column>div>a:hover {
+    color: #f8dbb8;
+}
+
+.contact-column>div>h4{
+    color: #B88E2F;
+}
+
+.contact-column>div>p:last-child{
+    font-size: 14px;
+    color: rgb(144, 144, 144); 
+}
+
+.msg-heading{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+}
+
+input, textarea{
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgb(144, 144, 144);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+button{
+    width: 25%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #F9F1E7;
+    background: #B88E2F;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+button:hover{
+    cursor: pointer;
+}

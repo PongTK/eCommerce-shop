@@ -35,15 +35,7 @@ function About() {
                 Ab optio alias rerum, libero exercitationem totam dignissimos
                 quasi. Voluptatibus explicabo totam molestias et facere quo,
                 dolor quos nemo ipsam, accusantium modi porro quaerat optio
-                ipsum atque dignissimos! Cupiditate sint ullam, reiciendis
-                reprehenderit impedit voluptatem quas consectetur?
-              </p>
-              <p className="story-text">
-                Officia temporibus culpa reprehenderit nobis quod! Ipsa hic
-                dolore, reiciendis fuga atque, necessitatibus explicabo
-                laboriosam numquam consectetur nobis corrupti nihil animi
-                incidunt, dolores eius quisquam fugiat. Asperiores iusto qui
-                eligendi quisquam.
+                ipsum atque dignissimos!
               </p>
             </div>
             <div className="card">
@@ -80,9 +72,7 @@ function About() {
                 commodi natus dolores voluptatibus excepturi tempora voluptas.
                 Ab optio alias rerum, libero exercitationem totam dignissimos
                 quasi. Voluptatibus explicabo totam molestias et facere quo,
-                dolor quos nemo ipsam, accusantium modi porro quaerat optio
-                ipsum atque dignissimos! Cupiditate sint ullam, reiciendis
-                reprehenderit impedit voluptatem quas consectetur?
+                dolor quos nemo ipsam!
               </p>
             </div>
           </div>

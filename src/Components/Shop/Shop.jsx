@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import { Route, Routes, NavLink } from "react-router-dom";
+import axios from "axios";
 
+import Service from "../ServiceComponent/Service";
 import AllProducts from "../Products/AllProducts";
 import Electronics from "../Products/Electronics";
 import Jewelery from "../Products/Jewelery";
 import MenC from "../Products/MenC";
 import WomenC from "../Products/WomenC";
-import axios from "axios";
 
 function Shop() {
   const [cates, setCates] = useState([]);
 
   const getCates = async () => {
-    const response = await axios.get(`https://fakestoreapi.com/products`);
-    const uniqueCates = [
-      ...new Set(response.data.map((item) => item.category)),
-    ];
-    const selectedCates = uniqueCates.slice(0, 4);
-    setCates(selectedCates);
+    const response = await axios.get(
+      `https://fakestoreapi.com/products/categories`
+    );
+    setCates(response.data);
   };
 
   useEffect(() => {
@@ -69,6 +68,7 @@ function Shop() {
           <Route path="/women's clothing" element={<WomenC />} />
         </Routes>
       </section>
+      <Service />
     </>
   );
 }
