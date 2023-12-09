@@ -1,0 +1,138 @@
+.register-section{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-BG{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.register-content{
+    width: 950px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.acc-img{
+    background: #8a8989;
+}
+
+.register-column{
+    text-align: center;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 50px;
+    height: 55px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.register-box{
+    display: flex;
+    flex-flow: column;
+    padding: 40px 20px;
+}
+
+.register-btn{
+    width: 150px;
+    padding: 10px 0;
+    background: #e1e1e1;
+    border: 1px solid #8a8989;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto 20px auto;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.change-btn{
+    position: absolute;
+    top: -10px;
+    width: 50%;
+    height: 100%;
+    background: #B88E2F;
+    border-radius: 10px;
+    z-index: -1;
+    transition: transform 0.25s;
+}
+
+.register-btn.active .change-btn {
+    transform: translateX(100%);
+}
+
+.register-card{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn{
+    width: 100%;
+}
+
+.already-title{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.clickLogin, .clickRegister, .forget-password{
+    color: #B88E2F;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.social-icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.social-icon li{
+    list-style-type: none;
+}
+
+.social-icon li a{
+    font-size: 36px;
+}
+
+.checkUser{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rememberMe{
+    display: flex;
+    flex-flow: row;
+}
+
+.rememberMe input#rememberCheckBx{
+    width: 16px !important;
+    margin: 0 10px;
+}

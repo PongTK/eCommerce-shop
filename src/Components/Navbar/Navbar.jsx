@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 import account from "/public/Images/account-outline.svg";
 import Cart from "/public/Images/shopping-cart-outlined.svg";
 
-function Navbar() {
+function Navbar({ setdisplayRegisPage }) {
+  const onRegisterClick = () => {
+    setdisplayRegisPage(true);
+  };
   return (
     <>
       <nav className="navbar-section">
@@ -31,9 +34,9 @@ function Navbar() {
             <a href="#" className="CartBtn">
               <img src={Cart} alt="shopping-cart-outlined" />
             </a>
-            <a href="#" className="accBtn">
+            <div onClick={onRegisterClick} className="accBtn">
               <img src={account} alt="account-outline" />
-            </a>
+            </div>
           </div>
         </div>
       </nav>

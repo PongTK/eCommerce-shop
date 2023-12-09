@@ -11,7 +11,7 @@ import MenCImg from "/public/Images/men's clothing.jpg";
 import WomenCImg from "/public/Images/women's clothing.jpg";
 import { NavLink } from "react-router-dom";
 
-function Home() {
+function Home({ setdisplayRegisPage }) {
   const sliderSettings = {
     autoplay: true,
     autoplaySpeed: 5000,
@@ -20,6 +20,10 @@ function Home() {
     speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+
+  const onRegisterClick = () => {
+    setdisplayRegisPage(true);
   };
 
   return (
@@ -147,7 +151,7 @@ function Home() {
         <div className="supscription">
           <h1>Monthly subscription with us to</h1>
           <h1>receive many privileges</h1>
-          <button>Register Now!</button>
+          <button onClick={onRegisterClick}>Register Now!</button>
         </div>
       </section>
     </>
