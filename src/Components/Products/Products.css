@@ -16,7 +16,6 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     padding: 16px 0;
     position: relative;
 }
@@ -57,11 +56,12 @@
     margin-bottom: 10px;
 }
 
-.productBtn a{
+.productBtn div{
     height: auto;
     padding: 5px 10px;
     font-size: 16px;
     color: #F9F1E7;
     background: #B88E2F;
     border-radius: 4px;
+    cursor: pointer;
 }

@@ -17,6 +17,7 @@ function App() {
   if (!!displayRegisPage) {
     regisPagePopUp = <Register setdisplayRegisPage={setdisplayRegisPage} />;
   }
+
   return (
     <Router>
       <>

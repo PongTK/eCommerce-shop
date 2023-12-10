@@ -43,7 +43,6 @@ function Shop() {
         <span className="header-text">SHOP</span>
         <span className="header-subText">Functional | Economical | Fine</span>
       </header>
-
       <section className="category-section">
         <div className="category-wrapper">
           <div className="category-group">

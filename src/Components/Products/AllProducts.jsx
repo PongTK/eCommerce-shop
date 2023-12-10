@@ -1,9 +1,29 @@
 import { useEffect, useState, React } from "react";
 import "./Products.css";
 import axios from "axios";
+import PopUpProduct from "../PopUpProduct/PopUpProduct";
 
 function AllProducts() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [products, setProducts] = useState([]);
+  const [displayPopUpProduct, setdisplayPopUpProduct] = useState(false);
+
+  let popUpProductPopUp = false;
+  if (!!displayPopUpProduct) {
+    popUpProductPopUp = (
+      <PopUpProduct
+        setdisplayPopUpProduct={setdisplayPopUpProduct}
+        selectedProduct={selectedProduct}
+        products={products}
+        setSelectedProduct={setSelectedProduct}
+      />
+    );
+  }
+
+  const onPopUpProductClick = (product) => {
+    setSelectedProduct(product);
+    setdisplayPopUpProduct(true);
+  };
 
   useEffect(() => {
     const loadproduct = async () => {
@@ -30,14 +50,18 @@ function AllProducts() {
               <p className="product-title">{product.title}</p>
               <p className="product-title">${product.price}</p>
               <div className="productBtn">
-                <a id="seeDetail" href="">
+                <div
+                  id="seeDetail"
+                  onClick={() => onPopUpProductClick(product)}
+                >
                   View Product
-                </a>
+                </div>
               </div>
             </div>
           </span>
         ))}
       </div>
+      {popUpProductPopUp}
     </>
   );
 }
