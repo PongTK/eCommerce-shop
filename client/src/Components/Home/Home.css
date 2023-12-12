@@ -1,0 +1,148 @@
+.slider-item{
+    height: 570px;
+    background: #e1e1e1;
+}
+
+.slider-container{
+    position: relative;
+    min-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-content{
+    max-width: 500px;
+}
+
+.slider-btn{
+    width: 150px;
+}
+
+.slider-btn a{
+    color: #F9F1E7;
+    width: 200px;
+}
+
+.home-section{
+    margin-top: 36px;
+}
+
+.promotion-container{
+    margin: 0 200px;
+    display: flex;
+    flex-flow: column;
+}
+
+.coupon-heading{
+    text-align: left;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+marquee{
+    margin-bottom: 24px;
+    border-left: 4px solid #B88E2F;
+    background: #e1e1e1;
+}
+
+marquee span{
+    margin-right: 100px;
+    margin-bottom: 24px;
+}
+
+.promotion-grid{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.coupon-grid-M{
+    grid-area: 1/1/4/2;
+    height: 560px;
+    border: 1px solid #B88E2F;
+}
+
+.coupon-grid-S{
+    height: 180px;
+    border: 1px solid #B88E2F;
+}
+
+.coupon-grid-M, .coupon-grid-S{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background: #e1e1e1;
+}
+
+.coupon-grid-M:hover, .coupon-grid-S:hover{
+    background-color: #F9F1E7;
+    transition: all 0.25s ease-in;
+}
+
+.category-grid{
+    margin-top: 100px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cate-box{
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.cate-box .img img{
+    background-position: right;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cate-box-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cate-box-content h1{
+    color: #ffffff;
+    display: none;
+    font-size: 28px;
+}
+
+.cate-box:hover .img{
+    filter: brightness(0.2);
+    transition: all .4s ease;
+}
+
+.cate-box:hover .cate-box-content h1{
+    display: block;
+}
+
+.supscription{
+    margin-top: 100px;
+    height: 400px;
+    background: #e1e1e1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.supscription h1{
+    font-size: 46px;
+}
+
+.supscription button{
+    width: 200px;
+
+}
