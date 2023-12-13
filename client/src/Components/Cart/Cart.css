@@ -29,6 +29,7 @@
 }
 
 .order-product{
+    min-height: 180px;
     display: grid;
     align-items: center;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
@@ -41,8 +42,16 @@
 .order-product-nameimg{
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 40px;
+    padding: 20px 0 20px 40px;
+}
+
+.order-product-img img{
+    width: 100px;
+}
+
+.order-product-name{
+    width: 70%;
 }
 
 .order-product-quantity{
@@ -79,6 +88,15 @@
     outline: none;
 }
 
+.order-product-delete{
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.order-product-delete:hover{
+    font-size: 30px;
+}
+
 .order-table-button{
     display: flex;
     justify-content: space-between;
@@ -105,6 +123,10 @@ div.coupon{
 .order-table-button button{
     margin: 0;
     width: 200px;
+}
+
+.cont-shopping a{
+    color: #F9F1E7;
 }
 
 /* Aside Cart Total */

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { signal } from "@preact/signals-react";
 import { Link } from "react-router-dom";
 import "./PopUpProduct.css";
 import { AiOutlineClose, AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+
+const cartList = signal([]);
 
 function PopUpProduct({
   setdisplayPopUpProduct,
@@ -10,6 +13,31 @@ function PopUpProduct({
   setSelectedProduct,
 }) {
   const [quantity, setQuantity] = useState(1);
+
+  const addToCart = () => {
+    const existingProduct = cartList.value.some(
+      (product) => product.id === selectedProduct.id
+    );
+
+    if (!existingProduct) {
+      const productToAdd = {
+        id: selectedProduct.id,
+        image: selectedProduct.image,
+        title: selectedProduct.title,
+        price: selectedProduct.price,
+        quantity: quantity,
+      };
+      cartList.value = [...cartList.value, productToAdd];
+    } else {
+      console.log("Product already in the cart");
+    }
+  };
+
+  useEffect(() => {
+    cartList.subscribe(() => {
+      localStorage.setItem("cart", JSON.stringify(cartList.value));
+    });
+  }, [cartList]);
 
   //ตรวจสอบข้อมูลที่ถูกส่งมาจากหน้ารายการสินค้า
   if (!selectedProduct) {
@@ -85,13 +113,15 @@ function PopUpProduct({
               <button className="quantity-dec" onClick={prevQuantity}>
                 -
               </button>
-              <input type="text" id="quantity-show" value={quantity} />
+              <input type="text" id="quantity-show" value={quantity} readOnly />
               <button className="quantity-inc" onClick={nextQuantity}>
                 +
               </button>
             </div>
             <div className="popup-product-btn">
-              <button id="addToCart"> ADD TO CART</button>
+              <button id="addToCart" onClick={addToCart}>
+                ADD TO CART
+              </button>
               <button id="checkOutcart">
                 <Link exact to="/Cart">
                   CHECK OUT CART
@@ -105,4 +135,5 @@ function PopUpProduct({
   );
 }
 
+export { cartList };
 export default PopUpProduct;

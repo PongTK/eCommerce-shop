@@ -1,7 +1,89 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import "./Cart.css";
+import { cartList } from "../PopUpProduct/PopUpProduct";
+import { AiTwotoneDelete } from "react-icons/ai";
 
 function Cart() {
+  const [productInCart, setProductInCart] = useState([]);
+
+  useEffect(() => {
+    const getCartLocalstorage = localStorage.getItem("cart");
+    setProductInCart(JSON.parse(getCartLocalstorage));
+  }, []);
+
+  const handleQuantityChange = (id, newQuantity) => {
+    const updateCart = cartList.value.map((product) => {
+      if (product.id === id) {
+        return { ...product, quantity: newQuantity };
+      }
+      return product;
+    });
+
+    cartList.value = updateCart;
+    setProductInCart(updateCart);
+
+    localStorage.setItem("cart", JSON.stringify(updateCart));
+  };
+
+  const handleDeleteClick = (id) => {
+    console.log("Deleting product with ID:", id);
+    cartList.value = cartList.value.filter((product) => product.id !== id);
+
+    setProductInCart(cartList.value);
+
+    localStorage.setItem("cart", JSON.stringify(cartList.value));
+  };
+
+  const productInCartTOShow = productInCart.map((cartProduct) => {
+    return (
+      <div className="order-product" key={cartProduct.id}>
+        <div className="order-product-nameimg">
+          <div className="order-product-img">
+            <img src={cartProduct.image} alt="pd-img" />
+          </div>
+          <div className="order-product-name">{cartProduct.title}</div>
+        </div>
+        <div className="order-product-price">${cartProduct.price}</div>
+        <div className="order-product-quantity">
+          <button
+            className="quantity-dec"
+            onClick={() => {
+              if (cartProduct.quantity > 1) {
+                const newQuantity = cartProduct.quantity - 1;
+                handleQuantityChange(cartProduct.id, newQuantity);
+              }
+            }}
+          >
+            -
+          </button>
+          <input
+            type="text"
+            id="quantity-show"
+            value={cartProduct.quantity}
+            readOnly
+          />
+          <button
+            className="quantity-inc"
+            onClick={() => {
+              const newQuantity = cartProduct.quantity + 1;
+              handleQuantityChange(cartProduct.id, newQuantity);
+            }}
+          >
+            +
+          </button>
+        </div>
+        <div className="order-product-total">$999</div>
+        <div
+          className="order-product-delete"
+          onClick={() => handleDeleteClick(cartProduct.id)}
+        >
+          <AiTwotoneDelete />
+        </div>
+      </div>
+    );
+  });
+
   return (
     <>
       <header>
@@ -19,31 +101,23 @@ function Cart() {
               <li>DELETE</li>
             </ul>
           </div>
-          <h2 class="no-have-product">No have Product</h2>
           <div className="order-table-container">
-            <div className="order-product">
-              <div className="order-product-nameimg">
-                <div className="order-product-img">
-                  <img src="" alt="pd-img" />
-                </div>
-                <div className="order-product-name">pd name</div>
-              </div>
-              <div className="order-product-price">$123</div>
-              <div className="order-product-quantity">
-                <button className="quantity-dec">-</button>
-                <input type="text" id="quantity-show" value="1" />
-                <button className="quantity-inc">+</button>
-              </div>
-              <div className="order-product-total">$999</div>
-              <div className="order-product-delete">delete</div>
-            </div>
+            {productInCartTOShow.length ? (
+              productInCartTOShow
+            ) : (
+              <h2 class="no-have-product">No have Product</h2>
+            )}
           </div>
           <div className="order-table-button">
             <div className="coupon">
               <input type="text" placeholder="Enter coupon code..." />
               <button>Apply Coupon</button>
             </div>
-            <button>Continue Shopping</button>
+            <button className="cont-shopping">
+              <NavLink exact to="/Shop">
+                Continue Shopping
+              </NavLink>
+            </button>
           </div>
         </div>
         <aside className="cart-total">
