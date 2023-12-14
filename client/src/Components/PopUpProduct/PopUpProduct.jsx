@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { signal } from "@preact/signals-react";
 import { Link } from "react-router-dom";
 import "./PopUpProduct.css";
-import { AiOutlineClose, AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineRight,
+  AiOutlineLeft,
+  AiTwotoneCheckCircle,
+} from "react-icons/ai";
 
 const cartList = signal([]);
 
@@ -13,6 +18,7 @@ function PopUpProduct({
   setSelectedProduct,
 }) {
   const [quantity, setQuantity] = useState(1);
+  const [showAlert, setShowAlert] = useState(false);
 
   const addToCart = () => {
     const existingProduct = cartList.value.some(
@@ -26,10 +32,15 @@ function PopUpProduct({
         title: selectedProduct.title,
         price: selectedProduct.price,
         quantity: quantity,
+        total: selectedProduct.price * quantity,
       };
       cartList.value = [...cartList.value, productToAdd];
+      setShowAlert(true);
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 1500);
     } else {
-      console.log("Product already in the cart");
+      alert("Product already in the cart!");
     }
   };
 
@@ -130,6 +141,14 @@ function PopUpProduct({
             </div>
           </div>
         </div>
+        {showAlert && (
+          <div className="alert">
+            <h3>THE PRODUCT HAS BEEN ADDED TO CART </h3>
+            <p>
+              <AiTwotoneCheckCircle />
+            </p>
+          </div>
+        )}
       </section>
     </>
   );

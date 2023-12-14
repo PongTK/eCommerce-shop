@@ -160,3 +160,27 @@
 #checkOutcart a{
     color: #f9f1e7;
 }
+
+div.alert{
+    position: absolute;
+    width: 450px;
+    height: 280px;
+    background: #B88E2F;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.alert h3{
+    font-size: 26px;
+    margin-top: 40px;
+    color: #f9f1e7;
+}
+
+div.alert p{
+    font-size: 50px;
+    margin-top: 20px;
+}

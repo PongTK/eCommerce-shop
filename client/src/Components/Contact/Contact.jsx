@@ -36,7 +36,7 @@ function Contact() {
               </div>
               <div className="mail">
                 <h4>e-mail</h4>
-                <p>support@mystore.com</p>
+                <p>support@TKstore.com</p>
                 <p>Send us your query anytime!</p>
               </div>
             </div>

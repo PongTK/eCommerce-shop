@@ -7,10 +7,10 @@ function Footer() {
       <footer className="footer-section">
         <div className="footer-wrapper">
           <div className="box1">
-            <div className="logo">My Store</div>
+            <div className="logo">TK Store</div>
             <div className="address"> 120/40 Sathorn, Bangkok, Thailand</div>
           </div>
-          <div className="copy-right"> 2023 My Store. All right reverved</div>
+          <div className="copy-right"> 2023 TK Store. All right reverved</div>
         </div>
       </footer>
     </>

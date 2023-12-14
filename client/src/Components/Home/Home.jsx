@@ -11,6 +11,11 @@ import MenCImg from "/public/Images/men's clothing.jpg";
 import WomenCImg from "/public/Images/women's clothing.jpg";
 import { NavLink } from "react-router-dom";
 
+import welcomeImg from "/public/Images/shop_open.jpg";
+import joinUsOnline from "/public/Images/join_us_online.jpg";
+import winterFashion from "/public/Images/winter_fashion.jpg";
+import monthlySub from "/public/Images/monthly_sub.jpg";
+
 function Home({ setdisplayRegisPage }) {
   const sliderSettings = {
     autoplay: true,
@@ -30,10 +35,11 @@ function Home({ setdisplayRegisPage }) {
     <>
       <Slider {...sliderSettings}>
         <div className="slider-item welcome">
+          <img src={welcomeImg} alt="shop-open" />
           <div className="slider-container">
             <div className="slider-content">
               <h1>WELCOME TO</h1>
-              <h1>MY STORE</h1>
+              <h1>TK STORE</h1>
               <p>
                 orem ipsum dolor sit amet consectetur, adipisicing elit.
                 Deserunt voluptatibus cupiditate expedita doloribus sit
@@ -44,6 +50,7 @@ function Home({ setdisplayRegisPage }) {
           </div>
         </div>
         <div className="slider-item discount">
+          <img src={joinUsOnline} alt="join-us-online" />
           <div className="slider-container">
             <div className="slider-content">
               <h1>REGISTER TO GET</h1>
@@ -54,15 +61,14 @@ function Home({ setdisplayRegisPage }) {
                 reiciendis, sequi vero ut sapiente et accusantium quis ducimus,
                 ipsum obcaecati ad consectetur sed dolore. Iusto!
               </p>
-              <button className="slider-btn">
-                <NavLink exact to="/Cart">
-                  Register
-                </NavLink>
+              <button className="slider-btn" onClick={onRegisterClick}>
+                Register
               </button>
             </div>
           </div>
         </div>
         <div className="slider-item collection">
+          <img src={winterFashion} alt="winter-fashion" />
           <div className="slider-container">
             <div className="slider-content">
               <h1>2023 COLLECTION</h1>
@@ -157,6 +163,7 @@ function Home({ setdisplayRegisPage }) {
           </NavLink>
         </div>
         <div className="supscription">
+          <img src={monthlySub} alt="monthly-sub" />
           <h1>Monthly subscription with us to</h1>
           <h1>receive many privileges</h1>
           <button onClick={onRegisterClick}>Register Now!</button>

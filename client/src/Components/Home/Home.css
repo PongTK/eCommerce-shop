@@ -1,6 +1,14 @@
 .slider-item{
-    height: 570px;
-    background: #e1e1e1;
+    height: 700px;
+    background: transparent;
+    position: relative;
+}
+
+.slider-item img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .slider-container{
@@ -131,11 +139,19 @@ marquee span{
 .supscription{
     margin-top: 100px;
     height: 400px;
-    background: #e1e1e1;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.supscription img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .supscription h1{

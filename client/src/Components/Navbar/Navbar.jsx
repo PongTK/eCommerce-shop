@@ -14,7 +14,7 @@ function Navbar({ setdisplayRegisPage }) {
       <nav className="navbar-section">
         <div className="navbar-wrapper">
           <a href="#" className="navbar-logo">
-            My Store
+            TK Store
           </a>
           <div className="navbar-manu">
             <Link exact to="/" className="homeBtn">

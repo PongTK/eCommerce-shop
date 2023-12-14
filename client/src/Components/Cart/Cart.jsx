@@ -10,12 +10,16 @@ function Cart() {
   useEffect(() => {
     const getCartLocalstorage = localStorage.getItem("cart");
     setProductInCart(JSON.parse(getCartLocalstorage));
-  }, []);
+  }, [cartList]);
 
   const handleQuantityChange = (id, newQuantity) => {
     const updateCart = cartList.value.map((product) => {
       if (product.id === id) {
-        return { ...product, quantity: newQuantity };
+        return {
+          ...product,
+          quantity: newQuantity,
+          total: product.price * newQuantity,
+        };
       }
       return product;
     });
@@ -73,7 +77,9 @@ function Cart() {
             +
           </button>
         </div>
-        <div className="order-product-total">$999</div>
+        <div className="order-product-total">
+          ${cartProduct.total.toFixed(2)}
+        </div>
         <div
           className="order-product-delete"
           onClick={() => handleDeleteClick(cartProduct.id)}
@@ -105,7 +111,7 @@ function Cart() {
             {productInCartTOShow.length ? (
               productInCartTOShow
             ) : (
-              <h2 class="no-have-product">No have Product</h2>
+              <h2 className="no-have-product">No have Product</h2>
             )}
           </div>
           <div className="order-table-button">
@@ -126,11 +132,22 @@ function Cart() {
           </div>
           <div className="cart-total-subtotal">
             <span>Sub Total :</span>
-            <span className="subtotal">$999</span>
+            <span className="subtotal">
+              $
+              {productInCart
+                .reduce((acc, product) => acc + product.total, 0)
+                .toFixed(2)}
+            </span>
           </div>
           <div className="cart-total-tax">
             <span>Tax 7% :</span>
-            <span className="taxtotal">$77</span>
+            <span className="taxtotal">
+              $
+              {(
+                productInCart.reduce((acc, product) => acc + product.total, 0) *
+                0.07
+              ).toFixed(2)}
+            </span>
           </div>
           <div className="cart-total-coupon">
             <span>Coupon Code :</span>
@@ -168,7 +185,20 @@ function Cart() {
             <div className="proceed">
               <div className="proceed-total">
                 <span>Total :</span>
-                <span className="total">$1076</span>
+                <span className="total">
+                  $
+                  {(
+                    productInCart.reduce(
+                      (acc, product) => acc + product.total,
+                      0
+                    ) +
+                    productInCart.reduce(
+                      (acc, product) => acc + product.total,
+                      0
+                    ) *
+                      0.07
+                  ).toFixed(2)}
+                </span>
               </div>
               <button className="proceed-to-checkout">
                 Proceed To Checkout
