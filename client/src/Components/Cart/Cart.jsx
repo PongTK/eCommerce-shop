@@ -200,9 +200,7 @@ function Cart() {
                   ).toFixed(2)}
                 </span>
               </div>
-              <button className="proceed-to-checkout">
-                Proceed To Checkout
-              </button>
+              <div className="proceed-to-checkout">Proceed To Checkout</div>
             </div>
           </form>
         </aside>

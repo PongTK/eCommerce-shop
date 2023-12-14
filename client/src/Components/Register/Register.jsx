@@ -6,6 +6,7 @@ import {
   AiFillFacebook,
   AiFillGoogleSquare,
 } from "react-icons/ai";
+import registerImg from "/public/Images/register.jpg";
 
 function Register({ setdisplayRegisPage }) {
   const [showRegisterCard, setShowRegisterCard] = useState(true);
@@ -25,7 +26,9 @@ function Register({ setdisplayRegisPage }) {
       <section className="register-section">
         <div className="register-BG"></div>
         <div className="register-content">
-          <div className="acc-img"></div>
+          <div className="acc-img">
+            <img src={registerImg} alt="registerImg" />
+          </div>
           <div className="register-column">
             <div className="close" onClick={closePopUp}>
               <AiOutlineClose />

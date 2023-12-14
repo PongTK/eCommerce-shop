@@ -172,11 +172,13 @@ div.coupon{
     color: white;
 }
 
-button.proceed-to-checkout{
+.proceed-to-checkout{
     color: #000;
     width: 100%;
     margin-top: 15px;
     padding: 10px;
     background: white;
     border: 1px solid #B88E2F;
+    border-radius: 4px;
+    cursor: pointer;
 }

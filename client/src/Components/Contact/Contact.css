@@ -86,8 +86,8 @@ input, textarea{
     text-align: left;
 }
 
-button{
-    width: 25%;
+.send-mag-submit-btn{
+    width: 100px;
     padding: 5px 10px;
     margin-top: 10px;
     font-size: 16px;
@@ -95,6 +95,7 @@ button{
     background: #B88E2F;
     border-radius: 4px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 button:hover{

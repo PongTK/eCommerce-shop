@@ -53,7 +53,7 @@ function Contact() {
                   rows="10"
                   placeholder="Enter your message"
                 ></textarea>
-                <button>submit</button>
+                <span className="send-mag-submit-btn">submit</span>
               </form>
             </div>
           </div>
