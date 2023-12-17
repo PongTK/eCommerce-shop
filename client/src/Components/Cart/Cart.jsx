@@ -59,7 +59,7 @@ function Cart() {
               }
             }}
           >
-            -
+            &lt;
           </button>
           <input
             type="text"
@@ -74,7 +74,7 @@ function Cart() {
               handleQuantityChange(cartProduct.id, newQuantity);
             }}
           >
-            +
+            &gt;
           </button>
         </div>
         <div className="order-product-total">
@@ -117,7 +117,7 @@ function Cart() {
           <div className="order-table-button">
             <div className="coupon">
               <input type="text" placeholder="Enter coupon code..." />
-              <button>Apply Coupon</button>
+              <button className="couponBtn">Apply Coupon</button>
             </div>
             <button className="cont-shopping">
               <NavLink exact to="/Shop">

@@ -1,6 +1,6 @@
 .service-section{
     width: 100vw;
-    height: 270px;
+    height: auto;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -10,9 +10,10 @@
 
 .service-wrapper{
     width: 80%;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
 }
 
 .service-content{
@@ -31,10 +32,39 @@
 #service-title{
     font-size: 25px;
     font-weight: 600;
+    text-align: left;
 }
 
 #service-detail{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #898989;
+    text-align: left;
+}
+
+@media only screen and (max-width:1024px) {
+    #service-title{
+        font-size: 16px;
+    }
+
+    #service-detail{
+        font-size: 16px;
+    }
+
+    .service-content img{
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .service-wrapper{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .service-wrapper{
+        grid-template-columns: 1fr;
+    }
 }

@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 150px;
+    position: relative;
 }
 
 .navbar-logo{
@@ -35,9 +36,37 @@
     color: #B88E2F;
 }
 
-/* แก้ตรงนี้ */
-.navbar-manu a:active{
-    color: #B88E2F;
+.navbar-manu-dropdown {
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #F9F1E7;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-manu-dropdown a, 
+.navbar-manu-dropdown div{
+    padding: 8px 0;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 36px;
+    background-color: #000;
+    margin: 5px 0;
+    border-radius: 4px;
 }
 
 .navbar-profile a{
@@ -51,8 +80,64 @@
     border-radius: 8px;
 }
 
+.accBtn p, .CartBtn p{
+    display: none;
+}
+
 .accBtn:hover, .CartBtn:hover{
     background: #B88E2F;
 }
 
+.navbar-manu-dropdown{
+    display: none;
+}
 
+.hidden {
+    display: none;
+}
+  
+
+@media only screen and (max-width: 1024px) {
+    .navbar-wrapper{
+        padding: 0 90px;
+    }
+
+    .navbar-manu a{
+        font-size: 18px;
+        margin: 0 8px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .navbar-wrapper{
+        padding: 0 50px;
+    }
+
+    .navbar-manu{
+        display: none;
+    }
+
+    .navbar-profile{
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-manu-dropdown{
+        display: flex;
+    }
+
+    .accBtn, .CartBtn{
+        border: none;
+    }
+
+    .accBtn p, .CartBtn p{
+        display: block;
+    }
+
+    .accBtn img, .CartBtn img{
+        display: none;
+    }
+}

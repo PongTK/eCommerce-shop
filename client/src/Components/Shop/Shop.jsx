@@ -12,6 +12,7 @@ import WomenC from "../Products/WomenC";
 
 function Shop() {
   const [cates, setCates] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const getCates = async () => {
     const response = await axios.get(
@@ -24,6 +25,14 @@ function Shop() {
     getCates();
   }, []);
 
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const closeDropdown = () => {
+    setShowDropdown(false);
+  };
+
   const cateElements = cates.map((cate) => {
     return (
       <NavLink
@@ -31,6 +40,7 @@ function Shop() {
         to={`/shop/${cate}`}
         className="cate"
         activeClassName="active"
+        onClick={closeDropdown}
       >
         <h3 className="elec-cate-title">{cate}</h3>
       </NavLink>
@@ -45,17 +55,23 @@ function Shop() {
       </header>
       <section className="category-section">
         <div className="category-wrapper">
-          <div className="category-group">
-            <NavLink
-              exact
-              to="/shop/"
-              className="cate all-products"
-              activeClassName="active"
-            >
-              <h3 className="elec-cate-title">All Products</h3>
-            </NavLink>
-            {cateElements}
+          <div className="category-toggle" onClick={toggleDropdown}>
+            Category
           </div>
+          {showDropdown && (
+            <div className="category-group-dropdown">
+              <NavLink
+                exact
+                to="/shop/"
+                className="cate all-products"
+                activeClassName="active"
+                onClick={closeDropdown}
+              >
+                <h3 className="elec-cate-title">All Products</h3>
+              </NavLink>
+              {cateElements}
+            </div>
+          )}
         </div>
       </section>
       <section className="product-list">

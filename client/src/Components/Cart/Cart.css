@@ -1,5 +1,5 @@
 .cart-section{
-    margin: 100px 220px;
+    margin: 100px 180px;
     display: grid;
     grid-template-columns: 5fr 2fr;
     gap: 40px;
@@ -7,10 +7,12 @@
 
 /*Order Table*/
 .order-table{
+    border-right: 1px solid rgb(216, 215, 215);
     overflow-x: auto;
 }
 
 .no-have-product{
+    min-width: 800px;
     font-size: 30px;
     font-weight: 500;
     text-align: left;
@@ -21,18 +23,21 @@
 }
 
 .order-table-header ul{
+    min-width: 800px;
     border: 1px solid rgb(216, 215, 215);
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
     padding: 10px 0;
     text-align: center;
 }
 
 .order-product{
+    min-width: 800px;
     min-height: 180px;
     display: grid;
     align-items: center;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr 0.65fr;
     text-align: center;
     border-bottom: 1px solid rgb(216, 215, 215);
     border-left: 1px solid rgb(216, 215, 215);
@@ -52,6 +57,8 @@
 
 .order-product-name{
     width: 70%;
+    text-align: left;
+    overflow: auto;
 }
 
 .order-product-quantity{
@@ -98,6 +105,7 @@
 }
 
 .order-table-button{
+    min-width: 900px;
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(216, 215, 215);
@@ -115,12 +123,12 @@ div.coupon{
     width: 200px;
 }
 
-.coupon button{
+.couponBtn{
     margin: 0;
     width: 150px;
 }
 
-.order-table-button button{
+.cont-shopping{
     margin: 0;
     width: 200px;
 }
@@ -144,7 +152,9 @@ div.coupon{
     border-bottom: 1px solid rgb(216, 215, 215);
 }
 
-.cart-total-subtotal, .cart-total-tax, .cart-total-coupon{
+.cart-total-subtotal,
+.cart-total-tax,
+.cart-total-coupon{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
@@ -181,4 +191,94 @@ div.coupon{
     border: 1px solid #B88E2F;
     border-radius: 4px;
     cursor: pointer;
+}
+
+@media only screen and (max-width:1200px){
+    .cart-section{
+        grid-template-columns: 1fr;
+        margin: 100px 50px;
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .order-product{
+        gap: 5px;
+    }
+
+    .order-product-nameimg{
+        padding: 10px 0 10px 15px;
+        gap: 10px;
+    }
+
+    .order-product-img img{
+        width: 90px;
+    }
+
+    .order-product-quantity button{
+        padding: 4px 7px;
+    }
+
+    .no-have-product,
+    .order-table-header ul,
+    .order-product,
+    .order-table-button{
+        min-width: 620px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .cart-section{
+        margin: 50px 50px;
+    }
+
+    .order-table-header ul{
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+    .order-table-header ul li{
+        font-size: 14px;
+    }
+
+    .order-product{
+        min-height: 160px;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+
+    .no-have-product{
+        font-size: 26px;
+        padding: 40px 50px;
+    }
+
+    .order-product-img img{
+        width: 70px;
+    }
+
+    .order-product-name,
+    .order-product-price,
+    .order-product-total{
+        font-size: 13px;
+    }
+
+    .cart-total-header p{
+        padding: 0 0 5px 0;
+        font-size: 16px;
+    }
+
+    .cart-total-subtotal,
+    .cart-total-tax,
+    .cart-total-coupon{
+        padding: 10px 0;
+    }
+
+    .cart-total-subtotal span,
+    .cart-total-tax span,
+    .cart-total-coupon span,
+    .delivery-address-box label,
+    .proceed-total span,
+    .proceed-to-checkout{
+        font-size: 14px;
+    }
+
+    .delivery-address-box, .proceed-total, .proceed-to-checkout{
+        margin-top: 10px;
+    }
 }

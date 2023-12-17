@@ -101,3 +101,38 @@ input, textarea{
 button:hover{
     cursor: pointer;
 }
+
+@media only screen and (max-width:1024px){
+    .contact-wrapper{
+        padding: 50px 0;
+    }
+
+    .contact-content{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .contact-section{
+       margin: 36px 30px; 
+    }
+
+    .contact-content{
+        padding: 0;
+    }
+
+    .contact-heading, .msg-heading{
+        font-size: 20px;
+    }
+
+   .contact-text{
+        font-size: 14px;
+    }
+
+    .contact-row{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+        padding: 0;
+    }
+}

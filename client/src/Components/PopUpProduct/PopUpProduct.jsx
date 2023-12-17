@@ -135,7 +135,7 @@ function PopUpProduct({
               </button>
               <button id="checkOutcart">
                 <Link exact to="/Cart">
-                  CHECK OUT CART
+                  CHECK OUT
                 </Link>
               </button>
             </div>

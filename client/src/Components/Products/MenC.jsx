@@ -49,7 +49,7 @@ function MenC() {
             </div>
             <div className="product-title-wrapper">
               <p className="product-title">{product.title}</p>
-              <p className="product-title">${product.price}</p>
+              <p className="product-price">${product.price}</p>
               <div className="productBtn">
                 <div
                   id="seeDetail"

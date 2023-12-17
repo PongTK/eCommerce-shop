@@ -20,7 +20,7 @@ function Service() {
           <div className="service-content">
             <img src={WarrantyImg} alt="WarrantyImg" />
             <div className="service-text">
-              <p id="service-title">Warranty Protection</p>
+              <p id="service-title">Warranty</p>
               <p id="service-detail">Over 2 years</p>
             </div>
           </div>
@@ -28,7 +28,7 @@ function Service() {
             <img src={ShippingImg} alt="ShippingImg" />
             <div className="service-text">
               <p id="service-title">Free Shipping</p>
-              <p id="service-detail">Order over 150 $</p>
+              <p id="service-detail">Order over $150</p>
             </div>
           </div>
           <div className="service-content">

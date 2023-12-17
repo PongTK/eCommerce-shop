@@ -3,7 +3,7 @@
 }
 
 .about-wrapper{
-    padding: 50px 200px;
+    padding: 50px 180px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -11,9 +11,8 @@
 
 /* story */
 .story-container{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 60% 40%;
     margin-bottom: 50px;
 }
 
@@ -28,7 +27,7 @@
 .story-heading{
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .story-text{
@@ -78,14 +77,14 @@
 
 /* Future */
 .future-container{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 30% 70%;
     margin-top: 50px;
+    gap: 50px;
 }
 
 .future-content{
-    margin-right: 50px;
+    margin-left: 50px;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -95,7 +94,7 @@
 .future-heading{
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .future-text{
@@ -107,15 +106,8 @@
 .future-card{
     width: 340.8px;
     height: 400px;
-    margin-right: 60px;
     position: relative;
     display: inline-block;
-}
-
-.future-card-wrapper{
-    width: 340.8px;
-    height: 400px;
-    position: relative;
 }
 
 .QRScanImg{
@@ -125,4 +117,57 @@
     display: block;
     position: absolute;
     z-index: 1;
+}
+
+@media only screen and (max-width:1024px) {
+    .about-wrapper{
+        padding: 50px 0;
+    }
+
+    .card, .future-card, .card-wrapper, .Img-outline{
+        width: 300px;
+        height: 360px;
+    }
+
+    .future-text, .story-text{
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .story-heading, .future-heading{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .story-container{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .future-container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .card, .card-wrapper, .Img-outline{
+        width: 100%;
+
+    }
+
+    .story-content, .future-content{
+        margin: 0;
+    }
+
+    .future-text, .story-text{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .story-heading, .future-heading{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
 }

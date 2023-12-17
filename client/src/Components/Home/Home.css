@@ -79,6 +79,7 @@ marquee span{
 }
 
 .coupon-grid-M, .coupon-grid-S{
+    padding: 10px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -160,5 +161,48 @@ marquee span{
 
 .supscription button{
     width: 200px;
+}
 
+@media only screen and (max-width:768px) {
+    .slider-content{
+        padding: 0 50px;
+    }
+
+    .slider-content h1{
+        font-size: 28px;
+    }
+
+    .slider-content p{
+        font-size: 14px;
+    }
+
+    .promotion-container{
+        margin: 0 50px;
+    }
+    
+    .promotion-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .coupon-grid-M, .coupon-grid-S{
+        height: 150px;
+    }
+
+    .coupon-grid-M h3{
+        font-size: 16px;
+    }
+
+    .coupon-grid-M p, .coupon-grid-S p{
+        font-size: 14px;
+    }
+
+    .category-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .supscription h1{
+        padding: 0 50px;
+        font-size: 32px;
+        line-height: 40px;
+    }
 }

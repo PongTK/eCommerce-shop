@@ -10,10 +10,10 @@
 
 .footer-wrapper{
     width: 80%;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 60% 40%;
     align-items: center;
+    gap: 12px;
 }
 
 .box1{
@@ -32,4 +32,19 @@
     font-size: 16px;
     font-weight: 500;
     color: #898989;
+    text-align: left;
+}
+
+@media only screen and (max-width:767px){
+    .logo{
+        font-size: 26px;
+    }
+
+    .address{
+        font-size: 12px;
+    }
+
+    .copy-right{
+        font-size: 12px;
+    }
 }

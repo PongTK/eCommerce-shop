@@ -8,9 +8,14 @@ function Footer() {
         <div className="footer-wrapper">
           <div className="box1">
             <div className="logo">TK Store</div>
-            <div className="address"> 120/40 Sathorn, Bangkok, Thailand</div>
+            <div className="address">
+              AAA tower 20th floor, 789 sathorn St, bangkok, Thailand 10120
+            </div>
           </div>
-          <div className="copy-right"> 2023 TK Store. All right reverved</div>
+          <div className="copy-right">
+            2023 TK Store. <br />
+            All right reverved
+          </div>
         </div>
       </footer>
     </>
