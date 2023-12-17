@@ -110,7 +110,7 @@
 
 @media only screen and (max-width:767px) {
     .navbar-wrapper{
-        padding: 0 50px;
+        padding: 0 10px;
     }
 
     .navbar-manu{

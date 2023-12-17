@@ -228,7 +228,7 @@ div.coupon{
 
 @media only screen and (max-width:767px){
     .cart-section{
-        margin: 50px 50px;
+        margin:30px;
     }
 
     .order-table-header ul{

@@ -177,7 +177,7 @@ marquee span{
     }
 
     .promotion-container{
-        margin: 0 50px;
+        margin: 0 30px;
     }
     
     .promotion-grid{
@@ -185,7 +185,7 @@ marquee span{
     }
 
     .coupon-grid-M, .coupon-grid-S{
-        height: 150px;
+        height: 160px;
     }
 
     .coupon-grid-M h3{

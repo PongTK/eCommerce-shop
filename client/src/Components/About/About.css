@@ -140,6 +140,10 @@
 }
 
 @media only screen and (max-width:767px){
+    .about-section {
+        margin: 30px;
+    }
+
     .story-container{
         display: flex;
         flex-direction: column-reverse;
