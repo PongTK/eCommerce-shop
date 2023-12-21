@@ -61,7 +61,7 @@ function PopUpProduct({
     );
 
     if (currentIndex === -1 || currentIndex === 0) {
-      setSelectedProduct(products[0]);
+      setSelectedProduct(products[products.length - 1]);
     } else {
       setSelectedProduct(products[currentIndex - 1]);
     }
@@ -73,7 +73,7 @@ function PopUpProduct({
     );
 
     if (currentIndex === -1 || currentIndex === products.length - 1) {
-      setSelectedProduct(products[products.length - 1]);
+      setSelectedProduct(products[0]);
     } else {
       setSelectedProduct(products[currentIndex + 1]);
     }

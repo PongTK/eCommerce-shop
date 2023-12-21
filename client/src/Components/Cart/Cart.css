@@ -7,7 +7,6 @@
 
 /*Order Table*/
 .order-table{
-    border-right: 1px solid rgb(216, 215, 215);
     overflow-x: auto;
 }
 
@@ -105,7 +104,7 @@
 }
 
 .order-table-button{
-    min-width: 900px;
+    min-width: 800px;
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(216, 215, 215);

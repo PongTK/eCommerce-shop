@@ -31,7 +31,6 @@ function Cart() {
   };
 
   const handleDeleteClick = (id) => {
-    console.log("Deleting product with ID:", id);
     cartList.value = cartList.value.filter((product) => product.id !== id);
 
     setProductInCart(cartList.value);
