@@ -3,7 +3,8 @@
     height: 90px;
     padding: 24px 20px;
     background-color: #F9F1E7;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
 }
 
 .navbar-wrapper{

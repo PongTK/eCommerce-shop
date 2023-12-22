@@ -1,6 +1,6 @@
 header{
     width: 100vw;
-    height: 310px;
+    height: 400px;
     background: url(/public/Images/HeaderImg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,6 +10,7 @@ header{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    padding-top: 90px;
 }
 
 .header-text{
